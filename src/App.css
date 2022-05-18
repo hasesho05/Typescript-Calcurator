@@ -1,38 +1,93 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #333;
+  height: 600px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper{
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator {
+  position: relative;
+  display: grid;
+  margin: auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
+
+.buttonPanel {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  transition: .5s;
+}
+
+.buttonPanel:hover{
+  transition: 0s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.result {
+  grid-column: span 4;
+  height: 140px;
+  width: 300px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 30px;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.num {
+  display: flex!important;
+  justify-content: space-between;
+}
+
+button {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 75px;
+  background-color: #353535;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  transition: .5s;
+}
+
+button:hover {
+  transition: 0s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+button:active {
+  background: #2785ff;
+  color: #192f00;
+  font-size: 24px;
+  font-weight: 500;
 }
